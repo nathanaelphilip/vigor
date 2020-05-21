@@ -33,8 +33,10 @@
       </div>
     </div>
   </div>
-  <section class="block:slides">
-    <div slides>
+  <section slides class="block:slides">
+    <button class="block:slides::arrow »left"><?= file_get_contents(get_stylesheet_directory() . '/dist/icn_arrow_l.svg') ?></button>
+    <button class="block:slides::arrow »right"><?= file_get_contents(get_stylesheet_directory() . '/dist/icn_arrow_r.svg') ?></button>
+    <div slides@slides>
       <?php while(have_rows('slides')): the_row(); ?>
         <article class="card:slide">
           <div class="card:slide::overlay">

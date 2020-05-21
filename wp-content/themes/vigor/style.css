@@ -1510,3 +1510,40 @@ body.state\:modal .component\:modal {
   cursor: pointer;
 }
 
+.block\:slides\:\:arrow {
+  background: none;
+  border: none;
+  padding: 0;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 1;
+}
+
+.block\:slides\:\:arrow.»left {
+  left: 100px;
+}
+
+@media (max-width: 38.74em) {
+  .block\:slides\:\:arrow.»left {
+    left: 35px;
+  }
+}
+
+.block\:slides\:\:arrow.»right {
+  right: 100px;
+}
+
+@media (max-width: 38.74em) {
+  .block\:slides\:\:arrow.»right {
+    right: 35px;
+  }
+}
+
+.block\:slides\:\:arrow svg {
+  display: block;
+  fill: #fff;
+  height: auto;
+  width: 20px;
+}
+

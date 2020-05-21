@@ -23,3 +23,25 @@
       &:hover
         background: $WHITE
         cursor: pointer
+
+.block\:slides\:\:arrow
+  background: none
+  border: none
+  padding: 0
+  position: absolute
+  top: 50%
+  transform: translateY(-50%)
+  z-index: 1
+  &.»left
+    left: 100px
+    @include mq ($until: mobile)
+      left: 35px
+  &.»right
+    right: 100px
+    @include mq ($until: mobile)
+      right: 35px
+  svg
+    display: block
+    fill: $WHITE
+    height: auto
+    width: 20px

@@ -3,8 +3,9 @@ window.addEventListener('touchstart', function() {
 });
 
 jQuery(($) => {
-  $('[slides]').slick({
-    arrows: false,
+  $('[slides\\@slides]').slick({
+    prevArrow: $('[slides]').find('.»left'),
+    nextArrow: $('[slides]').find('.»right'),
     dots: true
   })
 
