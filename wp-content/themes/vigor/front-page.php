@@ -19,7 +19,7 @@
           </div>
         </div>
       </div>
-      <figure class="card:slide::image">
+      <figure class="block:intro::image">
         <?= wp_get_attachment_image(get_sub_field('image'), 'full') ?>
       </figure>
     </section>

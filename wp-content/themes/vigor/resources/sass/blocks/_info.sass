@@ -1,0 +1,23 @@
+.block\:info
+  padding: 95px 0
+
+.block\:info\:\:container
+  @include container
+  align-items: center
+  display: grid
+  grid-template-columns: 1fr 1fr
+  grid-gap: 100px
+
+.block\:info\:\:heading
+  font-size: 60px
+  font-style: italic
+  font-weight: 700
+  letter-spacing: -3px
+  line-height: 1.1
+
+.block\:info\:\:content
+  font-size: 20px
+  line-height: 1.8
+  p
+    &:not(:last-child)
+      margin-bottom: 15px

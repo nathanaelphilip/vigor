@@ -521,6 +521,27 @@ a {
   text-decoration: none;
 }
 
+.card\:footer {
+  margin-top: -5px;
+}
+
+.card\:footer\:\:heading {
+  font-size: 16px;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+}
+
+.card\:footer\:\:content {
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 36px;
+}
+
+.card\:footer\:\:content a:hover {
+  color: #fff;
+}
+
 .component\:button {
   align-items: center;
   display: flex;
@@ -536,6 +557,15 @@ a {
   background: #ffd000;
 }
 
+.component\:button.»filled:hover {
+  background: #000;
+}
+
+.component\:button:hover {
+  background: #000;
+  border-color: #000;
+}
+
 .component\:button\:\:text {
   color: #ffd000;
   font-weight: 700;
@@ -545,6 +575,11 @@ a {
 
 .component\:button.»filled .component\:button\:\:text {
   color: #000;
+}
+
+.component\:button:hover .component\:button\:\:text,
+.component\:button.»filled:hover .component\:button\:\:text {
+  color: #fff;
 }
 
 .menu\:primary {
@@ -562,9 +597,24 @@ a {
   margin-right: 30px;
 }
 
+.block\:footer {
+  background: #000;
+  color: #fff;
+  padding: 200px 0;
+}
+
+.block\:footer\:\:container {
+  margin: 0 auto;
+  max-width: 1240px;
+  width: 90%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: 50px;
+}
+
 .block\:header {
   left: 0;
-  position: fixed;
+  position: absolute;
   top: 0;
   width: 100%;
   z-index: 10;
@@ -572,13 +622,44 @@ a {
 
 .block\:header\:\:boxes {
   margin: 0 auto;
-  max-width: 1400px;
+  max-width: 1240px;
   width: 90%;
   align-items: center;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-between;
+}
+
+.block\:info {
+  padding: 95px 0;
+}
+
+.block\:info\:\:container {
+  margin: 0 auto;
+  max-width: 1240px;
+  width: 90%;
+  align-items: center;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 100px;
+}
+
+.block\:info\:\:heading {
+  font-size: 60px;
+  font-style: italic;
+  font-weight: 700;
+  letter-spacing: -3px;
+  line-height: 1.1;
+}
+
+.block\:info\:\:content {
+  font-size: 20px;
+  line-height: 1.8;
+}
+
+.block\:info\:\:content p:not(:last-child) {
+  margin-bottom: 15px;
 }
 
 .block\:intro {
@@ -602,7 +683,7 @@ a {
 
 .block\:intro\:\:boxed {
   margin: 0 auto;
-  max-width: 1400px;
+  max-width: 1240px;
   width: 90%;
 }
 

@@ -7,6 +7,11 @@ $deg: -10deg
   padding: 16px
   &.»filled
     background: $YELLOW
+    &:hover
+      background: $BLACK
+  &:hover
+    background: $BLACK
+    border-color: $BLACK
 
 .component\:button\:\:text
   color: $YELLOW
@@ -15,3 +20,6 @@ $deg: -10deg
   text-transform: uppercase
   .component\:button.»filled &
     color: $BLACK
+  .component\:button:hover &,
+  .component\:button.»filled:hover &
+    color: $WHITE
