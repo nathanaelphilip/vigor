@@ -1,0 +1,17 @@
+$deg: -10deg
+
+.component\:button
+  @include flex ($justify: center)
+  border: 1px solid $YELLOW
+  transform: skewX($deg)
+  padding: 16px
+  &.»filled
+    background: $YELLOW
+
+.component\:button\:\:text
+  color: $YELLOW
+  font-weight: 700
+  transform: skewX(-$deg)
+  text-transform: uppercase
+  .component\:button.»filled &
+    color: $BLACK

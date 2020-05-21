@@ -1,0 +1,87 @@
+@mixin content
+  font-family: $SANS
+  font-weight: 200
+
+  a:not(.component\:button)
+    color: $BLUE
+
+  hr
+    border: none
+    background-image: $GRADIENT
+    height: 2px
+
+  h2
+    @include h2
+
+  h3
+    @include h3
+    font-family: $SERIF
+    color: $GREEN
+    &:not(:last-child)
+      margin-bottom: 20px
+
+  h4
+    @include h4
+    font-family: $SERIF
+    color: $GREEN
+    &:not(:last-child)
+      margin-bottom: 20px
+
+  p, ul, ol, .component\:button
+    &:not(:last-child)
+      margin-bottom: 20px
+
+  ul
+    list-style: disc
+    margin-left: 25px
+
+  blockquote
+    color: $GREEN
+    font-family: $SERIF
+    font-weight: 600
+    cite
+      color: $BLACK
+      display: block
+      font-weight: 400
+      margin-top: 5px
+      text-align: right
+
+
+@mixin h1
+  font-size: 65px
+  font-weight: 600
+  line-height: 1.2
+  @include mq ($until: desktop)
+    font-size: 50px
+  @include mq ($until: tablet)
+    font-size: 40px
+
+@mixin h2
+  font-size: 50px
+  font-weight: 600
+  line-height: 1.2
+  @include mq ($until: tablet)
+    font-size: 35px
+
+@mixin h3
+  font-size: 25px
+  font-weight: 600
+  line-height: 1.2
+  @include mq ($until: tablet)
+    font-size: 20px
+
+@mixin h4
+  font-size: 20px
+  font-weight: 600
+  line-height: 1.2
+  @include mq ($until: tablet)
+    font-size: 18px
+
+@mixin heading-line
+  &:after
+    background-image: $GRADIENT
+    content: ' '
+    display: block
+    height: 2px
+    margin-top: 5px
+    width: 100%

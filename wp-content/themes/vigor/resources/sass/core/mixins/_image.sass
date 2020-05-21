@@ -1,0 +1,11 @@
+@mixin image
+  display: block
+  height: auto
+
+@mixin image-max
+  @include image
+  max-width: 100%
+
+@mixin image-full
+  @include image
+  width: 100%
