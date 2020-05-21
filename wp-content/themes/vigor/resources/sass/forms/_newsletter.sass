@@ -1,0 +1,18 @@
+$deg: -10deg
+
+.form\:newsletter
+  display: grid
+  grid-template-columns: 2fr 1fr
+  grid-gap: 25px
+
+.form\:newsletter\:\:box
+  @include flex ($justify: center)
+  background: $WHITE
+  transform: skewX($deg)
+
+.form\:newsletter\:\:input
+  align-self: stretch
+  border: none
+  display: block
+  transform: skewX(-$deg)
+  width: 95%

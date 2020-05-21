@@ -2,9 +2,12 @@ $deg: -10deg
 
 .component\:button
   @include flex ($justify: center)
+  background: none
   border: 1px solid $YELLOW
   transform: skewX($deg)
   padding: 16px
+  &.»light
+    border-color: $WHITE
   &.»filled
     background: $YELLOW
     &:hover
@@ -18,6 +21,7 @@ $deg: -10deg
   font-weight: 700
   transform: skewX(-$deg)
   text-transform: uppercase
+  .component\:button.»light &,
   .component\:button.»filled &
     color: $BLACK
   .component\:button:hover &,

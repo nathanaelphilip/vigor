@@ -153,12 +153,16 @@
       <div class="block:newsletter::content">
         <p>and get $20 off your new membership or your next order in our store.</p>
       </div>
-      <form class="form:newsletter">
-        <input type="text" class="form:newsletter::input">
-        <button type="submit" class="component:button »light">Subscribe</button>
+      <form class="block:newsletter::form form:newsletter">
+        <div class="form:newsletter::box">
+          <input type="text" class="form:newsletter::input">
+        </div>
+        <button type="submit" class="component:button »light">
+          <span class="component:button::text">Subscribe</span>
+        </button>
       </form>
       <div class="block:newsletter::fineprint">
-        <p>We dont spam. I mean… Spam is in a can. Why would we put your email in a can?</p>
+        <p>We don’t spam. I mean… Spam is in a can. Why would we put your email in a can?</p>
       </div>
     </div>
   </aside>
