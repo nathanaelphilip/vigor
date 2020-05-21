@@ -34,28 +34,34 @@
     </div>
   </div>
   <section class="block:slides">
-    <article class="card:slide">
-      <div class="card:slide::overlay">
-        <div class="card:slide::box">
-          <h3 class="card:slide::heading">We got you. Seriously</h3>
-          <div class="card:slide::content">
-            <p>Team of our first class rockstar trainers, got you covered. Health plans, strenght training… you name it.</p>
+    <div slides>
+      <?php while(have_rows('slides')): the_row(); ?>
+        <article class="card:slide">
+          <div class="card:slide::overlay">
+            <div class="card:slide::box">
+              <h3 class="card:slide::heading">We got you. Seriously</h3>
+              <div class="card:slide::content">
+                <p>Team of our first class rockstar trainers, got you covered.<br>Health plans, strength training… you name it.</p>
+              </div>
+            </div>
+            <div class="card:slide::box">
+              <aside class="card:slide::coach card:coach">
+                <h4 class="card:coach::heading">Ali Douhani</h4>
+                <div class="card:coach::content">
+                  <p>2018 Olympic weightlifting champion, 2016 Crossfit Games finalist,  2013 Crossfit Games  - 2nd place</p>
+                </div>
+              </aside>
+              <div class="card:slide::action">
+                <a href="#">Meet All Our Coaches</a>
+              </div>
+            </div>
           </div>
-        </div>
-        <aside class="card:coach">
-          <h4 class="card:coach::heading">Ali Douhani</h4>
-          <div class="card:coach::content">
-            <p>2018 Olympic weightlifting champion, 2016 Crossfit Games finalist,  2013 Crossfit Games  - 2nd place</p>
-          </div>
-        </aside>
-        <div class="card:slide::action">
-          <a href="#">Meet All Our Coaches</a>
-        </div>
-      </div>
-      <figure class="card:slide::image">
-        <img src="//" alt="">
-      </figure>
-    </article>
+          <figure class="card:slide::image">
+            <?= wp_get_attachment_image(get_sub_field('image'), 'full') ?>
+          </figure>
+        </article>
+      <?php endwhile; ?>
+    </div>
   </section>
   <section class="block:plans">
     <div class="block:plans::container">

@@ -527,6 +527,12 @@ mark {
   display: inline-block;
 }
 
+.card\:coach\:\:heading {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
 .card\:footer {
   margin-top: -5px;
 }
@@ -658,6 +664,62 @@ mark {
   display: block;
   height: auto;
   width: 100%;
+}
+
+.card\:slide {
+  color: #fff;
+  position: relative;
+  text-align: center;
+}
+
+.card\:slide\:\:heading {
+  font-size: 60px;
+  font-style: italic;
+  font-weight: 700;
+  letter-spacing: -3px;
+  line-height: 1.1;
+  margin-bottom: 25px;
+}
+
+@media (max-width: 60.615em) {
+  .card\:slide\:\:heading {
+    font-size: 35px;
+  }
+}
+
+.card\:slide\:\:overlay {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  bottom: 0;
+  left: 0;
+  padding: 45px 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: 1;
+}
+
+.card\:slide\:\:box {
+  max-width: 545px;
+}
+
+.card\:slide\:\:image img {
+  display: block;
+  height: auto;
+  width: 100%;
+}
+
+.card\:slide\:\:coach {
+  margin-bottom: 25px;
+}
+
+.card\:slide\:\:action {
+  color: #ffd000;
+  font-weight: 700;
+  text-transform: uppercase;
 }
 
 .component\:button {
