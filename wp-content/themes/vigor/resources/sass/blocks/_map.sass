@@ -2,6 +2,8 @@
   background: grey
   min-height: 870px
   position: relative
+  @include mq ($until: mobile)
+    min-height: 500px
 
 .block\:map\:\:heading
   @include h2

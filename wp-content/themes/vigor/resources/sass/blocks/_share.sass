@@ -6,6 +6,9 @@
   display: grid
   grid-template-columns: 1fr 1.75fr
   grid-gap: 50px
+  @include mq ($until: mobile)
+    grid-template-columns: 1fr
+    grid-gap: 25px
 
 .block\:share\:\:heading
   @include h2
@@ -24,3 +27,5 @@
   display: grid
   grid-template-columns: 1fr 1fr
   grid-gap: 25px
+  @include mq ($until: mobile)
+    grid-template-columns: 1fr

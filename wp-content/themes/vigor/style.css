@@ -567,11 +567,13 @@ mark {
   z-index: 0;
 }
 
-.card\:plan.»featured {
-  border: none;
-  box-shadow: 0 0 10px rgba(151, 151, 151, 0.1);
-  margin: -20px -10px;
-  z-index: 1;
+@media (min-width: 38.75em) {
+  .card\:plan.»featured {
+    border: none;
+    box-shadow: 0 0 10px rgba(151, 151, 151, 0.1);
+    margin: -20px -10px;
+    z-index: 1;
+  }
 }
 
 .card\:plan\:\:heading {
@@ -788,6 +790,20 @@ mark {
   text-transform: uppercase;
 }
 
+@media (max-width: 38.74em) {
+  .menu\:primary {
+    opacity: 0;
+    visibility: hidden;
+    background: #fff;
+    color: #000;
+    height: 100%;
+    left: 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+  }
+}
+
 .menu\:primary a:not(:last-child) {
   margin-right: 30px;
 }
@@ -831,6 +847,26 @@ mark {
   grid-gap: 50px;
 }
 
+@media (max-width: 38.74em) {
+  .block\:footer\:\:container {
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 25px;
+  }
+}
+
+.block\:footer\:\:logo img {
+  display: block;
+  height: auto;
+  width: 100%;
+  max-width: 150px;
+}
+
+@media (max-width: 38.74em) {
+  .block\:footer\:\:logo img {
+    max-width: 100px;
+  }
+}
+
 .block\:header {
   left: 0;
   position: absolute;
@@ -862,6 +898,13 @@ mark {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-gap: 100px;
+}
+
+@media (max-width: 38.74em) {
+  .block\:info\:\:container {
+    grid-template-columns: 1fr;
+    grid-gap: 25px;
+  }
 }
 
 .block\:info\:\:heading {
@@ -917,14 +960,32 @@ mark {
 }
 
 .block\:intro\:\:heading {
-  color: #ffd000;
   font-size: 111px;
   font-style: italic;
   font-weight: 700;
   line-height: 0.85;
   letter-spacing: -5px;
+  color: #ffd000;
   margin-bottom: 35px;
   text-transform: uppercase;
+}
+
+@media (max-width: 64.0525em) {
+  .block\:intro\:\:heading {
+    font-size: 90px;
+  }
+}
+
+@media (max-width: 60.615em) {
+  .block\:intro\:\:heading {
+    font-size: 70px;
+  }
+}
+
+@media (max-width: 38.74em) {
+  .block\:intro\:\:heading {
+    font-size: 60px;
+  }
 }
 
 .block\:intro\:\:content {
@@ -950,6 +1011,12 @@ mark {
   background: grey;
   min-height: 870px;
   position: relative;
+}
+
+@media (max-width: 38.74em) {
+  .block\:map {
+    min-height: 500px;
+  }
 }
 
 .block\:map\:\:heading {
@@ -1055,6 +1122,13 @@ mark {
   grid-template-columns: 1fr 1fr 1fr;
 }
 
+@media (max-width: 38.74em) {
+  .block\:plans\:\:grid {
+    grid-template-columns: 1fr;
+    grid-gap: 25px;
+  }
+}
+
 .block\:share {
   padding: 95px 0;
 }
@@ -1066,6 +1140,13 @@ mark {
   display: grid;
   grid-template-columns: 1fr 1.75fr;
   grid-gap: 50px;
+}
+
+@media (max-width: 38.74em) {
+  .block\:share\:\:container {
+    grid-template-columns: 1fr;
+    grid-gap: 25px;
+  }
 }
 
 .block\:share\:\:heading {
@@ -1103,6 +1184,12 @@ mark {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-gap: 25px;
+}
+
+@media (max-width: 38.74em) {
+  .block\:share\:\:items {
+    grid-template-columns: 1fr;
+  }
 }
 
 .block\:slides {

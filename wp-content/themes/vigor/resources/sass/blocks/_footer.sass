@@ -8,3 +8,13 @@
   display: grid
   grid-template-columns: 1fr 1fr 1fr 1fr
   grid-gap: 50px
+  @include mq ($until: mobile)
+    grid-template-columns: 1fr 1fr
+    grid-gap: 25px
+
+.block\:footer\:\:logo
+  img
+    @include image-full
+    max-width: 150px
+    @include mq ($until: mobile)
+      max-width: 100px
