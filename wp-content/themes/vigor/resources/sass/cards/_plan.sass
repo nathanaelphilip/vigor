@@ -1,0 +1,44 @@
+.card\:plan
+  @include flex ($align: stretch, $direction: column)
+  background: $WHITE
+  border: 1px solid rgba(#979797, .2)
+  padding: 30px 50px
+  position: relative
+  z-index: 0
+  &.»featured
+    border: none
+    box-shadow: 0 0 10px rgba(#979797, .1)
+    margin: -20px -10px
+    z-index: 1
+
+.card\:plan\:\:heading
+  font-size: 26px
+  font-weight: 700
+  margin-bottom: 40px
+  text-transform: uppercase
+
+.card\:plan\:\:list
+  flex: 1
+  min-height: 300px
+
+.card\:plan\:\:item
+  @include flex
+  font-size: 20px
+  &:not(:last-child)
+    margin-bottom: 10px
+
+.card\:plan\:\:icon
+  svg
+    display: block
+    fill: $YELLOW
+    height: 13px
+    width: 17px
+    .card\:plan\:\:item:nth-child(n + 3) &
+      fill: #FF7B00
+    .card\:plan\:\:item:nth-child(n + 5) &
+      fill: #B61200
+
+.card\:plan\:\:action
+  .card\:plan.»featured &
+    position: relative
+    top: -20px

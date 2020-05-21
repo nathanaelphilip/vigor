@@ -66,50 +66,119 @@
           <ul class="card:plan::list">
             <li class="card:plan::item">
               2 times per week
+              <i class="card:plan::icon">
+                <?= file_get_contents(get_stylesheet_directory() . '/dist/checkmark.svg') ?>
+              </i>
             </li>
             <li class="card:plan::item">
               Stretching
+              <i class="card:plan::icon">
+                <?= file_get_contents(get_stylesheet_directory() . '/dist/checkmark.svg') ?>
+              </i>
             </li>
             <li class="card:plan::item">
               Light training
+              <i class="card:plan::icon">
+                <?= file_get_contents(get_stylesheet_directory() . '/dist/checkmark.svg') ?>
+              </i>
             </li>
           </ul>
           <div class="card:plan::action">
-            <a href="#" class="component:button »filled">$200 / Month</a>
+            <a href="#" class="component:button »filled">
+              <span class="component:button::text">
+                $200 / Month
+              </span>
+            </a>
+          </div>
+        </article>
+        <article class="card:plan »featured">
+          <h3 class="card:plan::heading">Intermediate</h3>
+          <ul class="card:plan::list">
+            <li class="card:plan::item">
+              3 times per week
+              <i class="card:plan::icon">
+                <?= file_get_contents(get_stylesheet_directory() . '/dist/checkmark.svg') ?>
+              </i>
+            </li>
+            <li class="card:plan::item">
+              Moderate Stretching
+              <i class="card:plan::icon">
+                <?= file_get_contents(get_stylesheet_directory() . '/dist/checkmark.svg') ?>
+              </i>
+            </li>
+            <li class="card:plan::item">
+              Moderate Cardio training
+              <i class="card:plan::icon">
+                <?= file_get_contents(get_stylesheet_directory() . '/dist/checkmark.svg') ?>
+              </i>
+            </li>
+            <li class="card:plan::item">
+              Food plan
+              <i class="card:plan::icon">
+                <?= file_get_contents(get_stylesheet_directory() . '/dist/checkmark.svg') ?>
+              </i>
+            </li>
+            <li class="card:plan::item">
+              Personal training plan
+              <i class="card:plan::icon">
+                <?= file_get_contents(get_stylesheet_directory() . '/dist/checkmark.svg') ?>
+              </i>
+            </li>
+          </ul>
+          <div class="card:plan::action">
+            <a href="#" class="component:button »filled">
+              <span class="component:button::text">
+                $300 / Month
+              </span>
+            </a>
           </div>
         </article>
         <article class="card:plan">
           <h3 class="card:plan::heading">Beginner</h3>
           <ul class="card:plan::list">
             <li class="card:plan::item">
-              2 times per week
+              6 times per week
+              <i class="card:plan::icon">
+                <?= file_get_contents(get_stylesheet_directory() . '/dist/checkmark.svg') ?>
+              </i>
             </li>
             <li class="card:plan::item">
-              Stretching
+              Core excercises
+              <i class="card:plan::icon">
+                <?= file_get_contents(get_stylesheet_directory() . '/dist/checkmark.svg') ?>
+              </i>
             </li>
             <li class="card:plan::item">
-              Light training
+              Hard cardio training
+              <i class="card:plan::icon">
+                <?= file_get_contents(get_stylesheet_directory() . '/dist/checkmark.svg') ?>
+              </i>
+            </li>
+            <li class="card:plan::item">
+              Strict food plan
+              <i class="card:plan::icon">
+                <?= file_get_contents(get_stylesheet_directory() . '/dist/checkmark.svg') ?>
+              </i>
+            </li>
+            <li class="card:plan::item">
+              Personal trainer
+              <i class="card:plan::icon">
+                <?= file_get_contents(get_stylesheet_directory() . '/dist/checkmark.svg') ?>
+              </i>
+            </li>
+            <li class="card:plan::item">
+              Competitive courses
+              <i class="card:plan::icon">
+                <?= file_get_contents(get_stylesheet_directory() . '/dist/checkmark.svg') ?>
+              </i>
             </li>
           </ul>
           <div class="card:plan::action">
-            <a href="#" class="component:button »filled">$200 / Month</a>
-          </div>
-        </article>
-        <article class="card:plan">
-          <h3 class="card:plan::heading">Beginner</h3>
-          <ul class="card:plan::list">
-            <li class="card:plan::item">
-              2 times per week
-            </li>
-            <li class="card:plan::item">
-              Stretching
-            </li>
-            <li class="card:plan::item">
-              Light training
-            </li>
-          </ul>
-          <div class="card:plan::action">
-            <a href="#" class="component:button »filled">$200 / Month</a>
+            <a href="#" class="component:button »filled">
+              <span class="component:button::text">
+                Contact Us
+              </span>
+            </a>
           </div>
         </article>
       </div>
