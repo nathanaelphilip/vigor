@@ -8,3 +8,10 @@
 .block\:header\:\:boxes
   @include container
   @include flex
+
+.block\:header\:\:logo
+  img
+    @include image-full
+    max-width: 150px
+    @include mq ($until: mobile)
+      max-width: 75px

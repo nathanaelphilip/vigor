@@ -246,7 +246,7 @@
       </div>
       <form class="block:newsletter::form form:newsletter">
         <div class="form:newsletter::box">
-          <input type="text" class="form:newsletter::input">
+          <input placeholder="name@email.com" type="text" class="form:newsletter::input">
         </div>
         <button type="submit" class="component:button »light">
           <span class="component:button::text">Subscribe</span>

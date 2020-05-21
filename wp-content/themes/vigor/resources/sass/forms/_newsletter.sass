@@ -4,6 +4,8 @@ $deg: -10deg
   display: grid
   grid-template-columns: 2fr 1fr
   grid-gap: 25px
+  @include mq ($until: mobile)
+    grid-template-columns: 1fr
 
 .form\:newsletter\:\:box
   @include flex ($justify: center)
@@ -16,3 +18,7 @@ $deg: -10deg
   display: block
   transform: skewX(-$deg)
   width: 95%
+  &:focus
+    outline: none
+  @include mq ($until: mobile)
+    padding: 15px 0

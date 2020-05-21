@@ -1,4 +1,5 @@
 .card\:slide
+  background: $BLACK
   color: $WHITE
   position: relative
   text-align: center
@@ -8,21 +9,39 @@
   margin-bottom: 25px
 
 .card\:slide\:\:overlay
-  @include flex ($direction: column)
-  bottom: 0
-  left: 0
-  padding: 45px 0
-  position: absolute
-  right: 0
-  top: 0
   z-index: 1
+  @include mq ($from: mobile)
+    @include flex ($direction: column)
+    bottom: 0
+    left: 0
+    padding: 45px 0 65px 0
+    position: absolute
+    right: 0
+    top: 0
+  @include mq ($until: mobile)
+    padding: 40px 5% 60px 5%
+    position: relative
 
 .card\:slide\:\:box
   max-width: 545px
+  &:not(:last-child)
+    @include mq ($until: mobile)
+      margin-bottom: 100px
 
 .card\:slide\:\:image
+  @include mq ($until: mobile)
+    bottom: 0
+    left: 0
+    position: absolute
+    right: 0
+    top: 0
   img
     @include image-full
+    @include mq ($until: mobile)
+      object-fit: cover
+      height: 100%
+      opacity: .5
+      width: 100%
 
 .card\:slide\:\:coach
   margin-bottom: 25px
