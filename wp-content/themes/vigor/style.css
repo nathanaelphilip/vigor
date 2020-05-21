@@ -1542,8 +1542,13 @@ body.state\:modal .component\:modal {
 
 .block\:slides\:\:arrow svg {
   display: block;
-  fill: #fff;
+  fill: rgba(255, 255, 255, 0.5);
   height: auto;
   width: 20px;
+}
+
+.block\:slides\:\:arrow svg:hover {
+  fill: #fff;
+  cursor: pointer;
 }
 
