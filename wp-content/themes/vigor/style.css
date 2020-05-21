@@ -1072,3 +1072,43 @@ mark {
   grid-gap: 25px;
 }
 
+.block\:slides {
+  position: relative;
+}
+
+.block\:slides .slick-dots {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  bottom: 25px;
+  left: 50%;
+  position: absolute;
+  transform: translateX(-50%);
+}
+
+.block\:slides .slick-dots li {
+  margin: 0 10px;
+}
+
+.block\:slides .slick-dots li.slick-active button {
+  background: #fff;
+}
+
+.block\:slides .slick-dots button {
+  background: rgba(255, 255, 255, 0.5);
+  border: none;
+  border-radius: 100%;
+  display: block;
+  height: 10px;
+  padding: 0;
+  text-indent: -99999px;
+  width: 10px;
+}
+
+.block\:slides .slick-dots button:hover {
+  background: #fff;
+  cursor: pointer;
+}
+

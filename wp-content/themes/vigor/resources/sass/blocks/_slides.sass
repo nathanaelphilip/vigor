@@ -1,0 +1,25 @@
+.block\:slides
+  position: relative
+  .slick-dots
+    @include flex
+    bottom: 25px
+    left: 50%
+    position: absolute
+    transform: translateX(-50%)
+    li
+      margin: 0 10px
+      &.slick-active button
+        background: $WHITE
+    button
+      $d: 10px
+      background: rgba($WHITE, .5)
+      border: none
+      border-radius: 100%
+      display: block
+      height: $d
+      padding: 0
+      text-indent: -99999px
+      width: $d
+      &:hover
+        background: $WHITE
+        cursor: pointer
