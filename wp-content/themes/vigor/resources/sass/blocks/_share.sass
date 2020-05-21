@@ -1,0 +1,26 @@
+.block\:share
+  padding: 95px 0
+
+.block\:share\:\:container
+  @include container
+  display: grid
+  grid-template-columns: 1fr 1.75fr
+  grid-gap: 50px
+
+.block\:share\:\:heading
+  @include h2
+  margin-bottom: 25px
+
+.block\:share\:\:content
+  @include content
+  margin-bottom: 25px
+
+.block\:share\:\:action
+  color: $YELLOW
+  font-weight: 700
+  text-transform: uppercase
+
+.block\:share\:\:items
+  display: grid
+  grid-template-columns: 1fr 1fr
+  grid-gap: 25px

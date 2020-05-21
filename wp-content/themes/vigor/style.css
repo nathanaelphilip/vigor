@@ -521,6 +521,12 @@ a {
   text-decoration: none;
 }
 
+mark {
+  background: none;
+  color: inherit;
+  display: inline-block;
+}
+
 .card\:footer {
   margin-top: -5px;
 }
@@ -542,6 +548,53 @@ a {
   color: #fff;
 }
 
+.card\:product {
+  position: relative;
+}
+
+.card\:product\:\:overlay {
+  align-items: flex-end;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  bottom: 0;
+  left: 0;
+  padding: 20px;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: 1;
+}
+
+.card\:product\:\:boxed {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.card\:product\:\:box {
+  color: #fff;
+}
+
+.card\:product\:\:heading {
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.card\:product\:\:price {
+  font-weight: 700;
+}
+
+.card\:product\:\:image img {
+  display: block;
+  height: auto;
+  width: 100%;
+}
+
 .component\:button {
   align-items: center;
   display: flex;
@@ -552,6 +605,15 @@ a {
   border: 1px solid #ffd000;
   transform: skewX(-10deg);
   padding: 16px;
+}
+
+.component\:button.»small {
+  font-size: 12px;
+  padding: 8px 15px;
+}
+
+.component\:button.»medium {
+  padding: 12px;
 }
 
 .component\:button.»light {
@@ -630,7 +692,7 @@ a {
 .block\:footer {
   background: #000;
   color: #fff;
-  padding: 200px 0;
+  padding: 135px 0;
 }
 
 .block\:footer\:\:container {
@@ -759,7 +821,7 @@ a {
 
 .block\:newsletter {
   background: #ffd000;
-  padding: 100px 0;
+  padding: 95px 0;
 }
 
 .block\:newsletter\:\:container {
@@ -800,5 +862,55 @@ a {
   font-size: 12px;
   font-weight: 500;
   text-align: center;
+}
+
+.block\:share {
+  padding: 95px 0;
+}
+
+.block\:share\:\:container {
+  margin: 0 auto;
+  max-width: 1240px;
+  width: 90%;
+  display: grid;
+  grid-template-columns: 1fr 1.75fr;
+  grid-gap: 50px;
+}
+
+.block\:share\:\:heading {
+  font-size: 60px;
+  font-style: italic;
+  font-weight: 700;
+  letter-spacing: -3px;
+  line-height: 1.1;
+  margin-bottom: 25px;
+}
+
+@media (max-width: 60.615em) {
+  .block\:share\:\:heading {
+    font-size: 35px;
+  }
+}
+
+.block\:share\:\:content {
+  font-size: 20px;
+  line-height: 1.8;
+  margin-bottom: 25px;
+}
+
+.block\:share\:\:content p:not(:last-child) {
+  margin-bottom: 10px;
+}
+
+.block\:share\:\:action {
+  color: #ffd000;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.block\:share\:\:items {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 25px;
 }
 

@@ -1,0 +1,30 @@
+.card\:product
+  position: relative
+
+.card\:product\:\:overlay
+  @include flex( $align: flex-end)
+  bottom: 0
+  left: 0
+  padding: 20px
+  position: absolute
+  right: 0
+  top: 0
+  z-index: 1
+
+.card\:product\:\:boxed
+  @include flex
+  width: 100%
+
+.card\:product\:\:box
+  color: $WHITE
+
+.card\:product\:\:heading
+  font-size: 20px
+  font-weight: 700
+
+.card\:product\:\:price
+  font-weight: 700
+
+.card\:product\:\:image
+  img
+    @include image-full

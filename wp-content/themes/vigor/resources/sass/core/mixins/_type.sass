@@ -1,36 +1,9 @@
 @mixin content
-  font-family: $SANS
-  font-weight: 200
-
-  hr
-    border: none
-    background-image: $GRADIENT
-    height: 2px
-
-  h2
-    @include h2
-
-  h3
-    @include h3
-
-  p, ul, ol, .component\:button
+  font-size: 20px
+  line-height: 1.8
+  p
     &:not(:last-child)
-      margin-bottom: 20px
-
-  ul
-    list-style: disc
-    margin-left: 25px
-
-  blockquote
-    color: $GREEN
-    font-family: $SERIF
-    font-weight: 600
-    cite
-      color: $BLACK
-      display: block
-      font-weight: 400
-      margin-top: 5px
-      text-align: right
+      margin-bottom: 10px
 
 
 @mixin h1

@@ -116,37 +116,47 @@
     </div>
   </section>
   <figure class="block:map"></figure>
-  <aside class="block:share">
-    <div class="block:share::container">
-      <div class="block:share::box">
-        <h3 class="block:share::heading">Share the passion</h3>
-        <div class="block:share::content">
-          <p>Support the movement by wearing the toughest gear in the wild. Represent the chapter and yourself in our latest selected gear.</p>
-        </div>
-        <div class="block:share::action">
-          <a href="#">Browse Our Shop</a>
-        </div>
-      </div>
-      <div class="block:share::items">
-        <article class="card:product">
-          <div class="card:product::overlay">
-            <div class="card:product::boxed">
-              <div class="card:product::box">
-                <h4 class="card:product::heading">Cross Shorts WMNS</h4>
-                <mark class="card:product::price">$25.95</mark>
-              </div>
-              <div class="card:product::action">
-                <a href="#" class="component:button »filled">Buy Now</a>
-              </div>
-            </div>
+  <?php while(have_rows('share')): the_row(); ?>
+    <aside class="block:share">
+      <div class="block:share::container">
+        <div class="block:share::box">
+          <h3 class="block:share::heading"><?php the_sub_field('heading') ?></h3>
+          <div class="block:share::content">
+            <?php the_sub_field('content') ?>
           </div>
-          <figure class="card:product::image">
-            <img src="" alt="">
-          </figure>
-        </article>
+          <?php if ($action = get_sub_field('action')): ?>
+            <div class="block:share::action">
+              <a href="<?= $action['url'] ?>" target="<?= $action['target'] ?>"><?= $action['title'] ?></a>
+            </div>
+          <?php endif; ?>
+        </div>
+        <div class="block:share::items">
+          <?php while(have_rows('items')): the_row(); ?>
+            <article class="card:product">
+              <div class="card:product::overlay">
+                <div class="card:product::boxed">
+                  <div class="card:product::box">
+                    <h4 class="card:product::heading">Cross Shorts WMNS</h4>
+                    <mark class="card:product::price">$25.95</mark>
+                  </div>
+                  <div class="card:product::action">
+                    <a href="#" class="component:button »small »filled">
+                      <span class="component:button::text">
+                        Buy Now
+                      </span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <figure class="card:product::image">
+                <?= wp_get_attachment_image(get_sub_field('image'), 'full') ?>
+              </figure>
+            </article>
+          <?php endwhile; ?>
+        </div>
       </div>
-    </div>
-  </aside>
+    </aside>
+  <?php endwhile; ?>
   <aside class="block:newsletter">
     <div class="block:newsletter::container">
       <h3 class="block:newsletter::heading">Subscribe to our newsletter</h3>
