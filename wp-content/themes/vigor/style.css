@@ -946,6 +946,39 @@ mark {
   width: 100%;
 }
 
+.block\:map {
+  background: grey;
+  min-height: 870px;
+  position: relative;
+}
+
+.block\:map\:\:heading {
+  font-size: 60px;
+  font-style: italic;
+  font-weight: 700;
+  letter-spacing: -3px;
+  line-height: 1.1;
+  position: absolute;
+  left: 50%;
+  text-align: center;
+  top: 100px;
+  transform: translateX(-50%);
+  z-index: 5;
+}
+
+@media (max-width: 60.615em) {
+  .block\:map\:\:heading {
+    font-size: 35px;
+  }
+}
+
+.block\:map\:\:map {
+  height: 100%;
+  position: absolute;
+  width: 100%;
+  z-index: 1;
+}
+
 .block\:newsletter {
   background: #ffd000;
   padding: 95px 0;

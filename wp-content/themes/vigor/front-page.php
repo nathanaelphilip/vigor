@@ -52,7 +52,7 @@
                 </div>
               </aside>
               <div class="card:slide::action">
-                <a href="#">Meet All Our Coaches</a>
+                <a href="/meet-the-coaches">Meet All Our Coaches</a>
               </div>
             </div>
           </div>
@@ -90,7 +90,7 @@
             </li>
           </ul>
           <div class="card:plan::action">
-            <a href="#" class="component:button »filled">
+            <a href="/product/plan/beginner" class="component:button »filled">
               <span class="component:button::text">
                 $200 / Month
               </span>
@@ -132,7 +132,7 @@
             </li>
           </ul>
           <div class="card:plan::action">
-            <a href="#" class="component:button »filled">
+            <a href="/product/plan/intermediate" class="component:button »filled">
               <span class="component:button::text">
                 $300 / Month
               </span>
@@ -140,7 +140,7 @@
           </div>
         </article>
         <article class="card:plan">
-          <h3 class="card:plan::heading">Beginner</h3>
+          <h3 class="card:plan::heading">Competitive</h3>
           <ul class="card:plan::list">
             <li class="card:plan::item">
               6 times per week
@@ -180,7 +180,7 @@
             </li>
           </ul>
           <div class="card:plan::action">
-            <a href="#" class="component:button »filled">
+            <a href="/product/plan/competitive" class="component:button »filled">
               <span class="component:button::text">
                 Contact Us
               </span>
@@ -190,7 +190,13 @@
       </div>
     </div>
   </section>
-  <figure class="block:map"></figure>
+  <figure class="block:map">
+    <h3 class="block:map::heading">Come and stop by</h3>
+    <div class="block:map::location" pin data-lat="37.791012" data-lng="-122.402100"></div>
+    <div class="block:map::location" pin data-lat="37.765251" data-lng="-122.435959"></div>
+    <div class="block:map::location" pin data-lat="37.776272" data-lng="-122.484917"></div>
+    <div id="map" class="block:map::map"></div>
+  </figure>
   <?php while(have_rows('share')): the_row(); ?>
     <aside class="block:share">
       <div class="block:share::container">

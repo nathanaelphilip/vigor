@@ -21,11 +21,11 @@
       <div class="card:footer">
         <h5 class="card:footer::heading">SiteMap</h5>
         <nav class="card:footer::content">
-          <a href="#">About</a><br>
-          <a href="#">Programs</a><br>
-          <a href="#">Careers</a><br>
-          <a href="#">Contact</a><br>
-          <a href="#">Store</a><br>
+          <a href="/about">About</a><br>
+          <a href="/programs">Programs</a><br>
+          <a href="/careers">Careers</a><br>
+          <a href="/contact">Contact</a><br>
+          <a href="/store">Store</a><br>
         </nav>
       </div>
     </div>
@@ -33,10 +33,10 @@
       <div class="card:footer">
         <h5 class="card:footer::heading">Social</h5>
         <nav class="card:footer::content">
-          <a href="#">Twitter</a><br>
-          <a href="#">Instagram</a><br>
-          <a href="#">Facebook</a><br>
-          <a href="#">YouTube</a><br>
+          <a href="https://twitter.com" target="_blank">Twitter</a><br>
+          <a href="https://instagram.com" target="_blank">Instagram</a><br>
+          <a href="https://facebook.com" target="_blank">Facebook</a><br>
+          <a href="https://youtube.com" target="_blank">YouTube</a><br>
         </nav>
       </div>
     </div>

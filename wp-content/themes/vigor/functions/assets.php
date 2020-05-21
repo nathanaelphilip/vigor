@@ -13,7 +13,9 @@
 
   function cf_enqueue_scripts ()
   {
+    wp_register_script('gmap', 'https://maps.google.com/maps/api/js?key=AIzaSyBX4NOmT9Ud9QXyIIWE6eSSp17DX-NGH18', false, false, false);
     wp_register_script('slick', 'https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js', ['jquery'], '1.9.0', true);
-    wp_register_script('vigor', get_template_directory_uri() . '/dist/site.js', ['jquery', 'slick'], filemtime(get_template_directory() . '/dist/site.js'), true);
+    wp_register_script('vigor', get_template_directory_uri() . '/dist/site.js', ['gmap', 'jquery', 'slick'], filemtime(get_template_directory() . '/dist/site.js'), true);
     wp_enqueue_script('vigor');
+    wp_localize_script('vigor', 'VIGOR', ['STYLESHEET_DIR' => get_stylesheet_directory_uri()]);
   }
