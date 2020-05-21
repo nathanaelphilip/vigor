@@ -252,9 +252,9 @@
       <div class="block:newsletter::content">
         <p>and get $20 off your new membership or your next order in our store.</p>
       </div>
-      <form class="block:newsletter::form form:newsletter">
+      <form coupon class="block:newsletter::form form:newsletter">
         <div class="form:newsletter::box">
-          <input placeholder="name@email.com" type="text" class="form:newsletter::input">
+          <input name="EMAIL" placeholder="name@email.com" type="text" class="form:newsletter::input">
         </div>
         <button type="submit" class="component:button »light">
           <span class="component:button::text">Subscribe</span>

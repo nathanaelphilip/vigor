@@ -9,6 +9,21 @@ jQuery(($) => {
     dots: true
   })
 
+
+  $('[coupon]').on('submit', async event => {
+    event.preventDefault()
+
+    const email = $(event.currentTarget).find('input').val()
+
+    const response = await $.get(VIGOR.AJAX, {
+      action: 'subscribe',
+      email
+    })
+
+    console.log(response)
+  })
+
+
   const $pins = $('[pin]')
 
   const map = new google.maps.Map(document.getElementById('map'), {

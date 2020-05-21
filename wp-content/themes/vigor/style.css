@@ -958,6 +958,12 @@ body.state\:modal .component\:modal {
   margin-right: 30px;
 }
 
+.menu\:primary\:\:cart svg {
+  display: block;
+  fill: #fff;
+  width: 20px;
+}
+
 .form\:newsletter {
   display: grid;
   grid-template-columns: 2fr 1fr;
