@@ -212,16 +212,17 @@
           <?php endif; ?>
         </div>
         <div class="block:share::items">
-          <?php while(have_rows('items')): the_row(); ?>
+          <?php foreach (get_sub_field('products') as $id): ?>
+            <?php $product = new WC_Product($id) ?>
             <article class="card:product">
               <div class="card:product::overlay">
                 <div class="card:product::boxed">
                   <div class="card:product::box">
-                    <h4 class="card:product::heading">Cross Shorts WMNS</h4>
-                    <mark class="card:product::price">$25.95</mark>
+                    <h4 class="card:product::heading"><?= $product->get_title() ?></h4>
+                    <mark class="card:product::price"><?= $product->get_price_html() ?></mark>
                   </div>
                   <div class="card:product::action">
-                    <a href="#" class="component:button »small »filled">
+                    <a href="<?= get_permalink($product->id) ?>" class="component:button »small »filled">
                       <span class="component:button::text">
                         Buy Now
                       </span>
@@ -230,10 +231,10 @@
                 </div>
               </div>
               <figure class="card:product::image">
-                <?= wp_get_attachment_image(get_sub_field('image'), 'full') ?>
+                <?= wp_get_attachment_image($product->get_image_id(), 'full') ?>
               </figure>
             </article>
-          <?php endwhile; ?>
+          <?php endforeach; ?>
         </div>
       </div>
     </aside>
