@@ -1,0 +1,27 @@
+.component\:modal
+  @include hide
+  @include flex ($justify: center)
+  background: rgba($BLACK, .5)
+  height: 100%
+  left: 0
+  position: fixed
+  top: 0
+  width: 100%
+  z-index: 10
+  body.state\:modal &
+    @include show
+
+.component\:modal\:\:content
+  position: relative
+  width: 100%
+
+.component\:modal\:\:close
+  background: none
+  border: none
+  color: $WHITE
+  font-weight: 700
+  position: absolute
+  right: 15px
+  text-transform: uppercase
+  top: 15px
+  z-index: 2

@@ -1,0 +1,45 @@
+.card\:location
+  max-width: 380px
+  padding: 25px
+
+.card\:location\:\:heading
+  font-size: 26px
+  font-weight: 700
+  margin-bottom: 10px
+
+.card\:location\:\:address
+  font-size: 16px
+  font-weight: 500
+  line-height: 1.2
+  margin-bottom: 20px
+
+.card\:location\:\:hours
+  font-size: 12px
+  margin-bottom: 20px
+  td:first-child
+    padding-right: 20px
+    text-transform: uppercase
+
+.card\:location\:\:gallery
+  display: grid
+  grid-template-columns: 1fr 1fr 1fr 1fr
+  grid-gap: 15px
+  @include mq ($until: mobile)
+    grid-template-columns: 1fr 1fr
+
+.card\:location\:\:image
+  position: relative
+  img
+    @include image-full
+
+.card\:location\:\:action
+  @include flex ($justify: center)
+  background: rgba($BLACK, .5)
+  border: none
+  bottom: 0
+  color: $WHITE
+  left: 0
+  position: absolute
+  right: 0
+  top: 0
+  width: 100%

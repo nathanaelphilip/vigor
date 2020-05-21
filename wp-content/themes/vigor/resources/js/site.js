@@ -8,8 +8,6 @@ jQuery(($) => {
     dots: true
   })
 
-  console.log(document.getElementById('map'))
-
   const $pins = $('[pin]')
 
   const map = new google.maps.Map(document.getElementById('map'), {
@@ -17,10 +15,34 @@ jQuery(($) => {
     zoom: 13
   })
 
+  $('body').on('click', '[action]', async event => {
+    event.preventDefault()
+    const $element = $(event.currentTarget)
+    const url = $element.attr('href')
+
+    const html = await $.get(url, {action: 'gallery'}, 'html')
+
+    $('[modal\\@content]').html(html)
+
+    $('body').addClass('state:modal')
+
+    $('[gallery\\@slides]').slick({
+      prevArrow: $('[gallery]').find('.»left'),
+      nextArrow: $('[gallery]').find('.»right'),
+      fade: true
+    })
+
+    $('[modal\\@close]').one('click', event => {
+      event.preventDefault()
+      $('body').removeClass('state:modal')
+    })
+  })
+
   $pins.each((index, element) => {
     const $pin = $(element)
     const lng = parseFloat($pin.data('lng'))
     const lat = parseFloat($pin.data('lat'))
+    const url = $pin.data('url')
 
     const position = new google.maps.LatLng(lat, lng);
 
@@ -44,16 +66,19 @@ jQuery(($) => {
     marker.setMap(map)
 
     const infowindow = new google.maps.InfoWindow({
-      content: `<div>TBD</div>`
+      content: `<div class="component:fetching"></div>`
     })
 
     infowindow.addListener('closeclick', event => {
       marker.setIcon(icon)
     })
 
-    marker.addListener('click', event => {
+    marker.addListener('click', async event => {
       marker.setIcon(iconActive)
-      infowindow.setContent(`AJAX Content!`)
+
+      const html = await $.get(url, {action: 'content'}, 'html')
+
+      infowindow.setContent(html)
       infowindow.open(map, marker)
     })
   })

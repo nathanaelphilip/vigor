@@ -190,11 +190,16 @@
       </div>
     </div>
   </section>
+  <?php $locations = new wp_query([
+    'post_type' => 'location',
+    'nopaging' => true,
+    'no_found_rows' => true
+    ]) ?>
   <figure class="block:map">
     <h3 class="block:map::heading">Come and stop by</h3>
-    <div class="block:map::location" pin data-lat="37.791012" data-lng="-122.402100"></div>
-    <div class="block:map::location" pin data-lat="37.765251" data-lng="-122.435959"></div>
-    <div class="block:map::location" pin data-lat="37.776272" data-lng="-122.484917"></div>
+    <?php if ( $locations->have_posts() ) : while ( $locations->have_posts() ) : $locations->the_post(); ?>
+      <div class="block:map::location" pin data-url="<?php the_permalink() ?>" data-lat="<?php the_field('lat') ?>" data-lng="<?php the_field('lng') ?>"></div>
+    <?php endwhile; endif; wp_reset_query() ?>
     <div id="map" class="block:map::map"></div>
   </figure>
   <?php while(have_rows('share')): the_row(); ?>

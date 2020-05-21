@@ -42,4 +42,9 @@
     </div>
   </div>
 </footer>
+
+<div modal class="component:modal">
+  <button modal@close class="component:modal::close">close</button>
+  <div modal@content class="component:modal::content"></div>
+</div>
 <?php wp_footer(); ?>

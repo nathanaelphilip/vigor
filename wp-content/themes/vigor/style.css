@@ -560,6 +560,73 @@ mark {
   color: #fff;
 }
 
+.card\:location {
+  max-width: 380px;
+  padding: 25px;
+}
+
+.card\:location\:\:heading {
+  font-size: 26px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.card\:location\:\:address {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.2;
+  margin-bottom: 20px;
+}
+
+.card\:location\:\:hours {
+  font-size: 12px;
+  margin-bottom: 20px;
+}
+
+.card\:location\:\:hours td:first-child {
+  padding-right: 20px;
+  text-transform: uppercase;
+}
+
+.card\:location\:\:gallery {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: 15px;
+}
+
+@media (max-width: 38.74em) {
+  .card\:location\:\:gallery {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.card\:location\:\:image {
+  position: relative;
+}
+
+.card\:location\:\:image img {
+  display: block;
+  height: auto;
+  width: 100%;
+}
+
+.card\:location\:\:action {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.5);
+  border: none;
+  bottom: 0;
+  color: #fff;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 100%;
+}
+
 .card\:plan {
   align-items: stretch;
   display: flex;
@@ -824,6 +891,45 @@ mark {
   color: #fff;
 }
 
+.component\:modal {
+  opacity: 0;
+  visibility: hidden;
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.5);
+  height: 100%;
+  left: 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 10;
+}
+
+body.state\:modal .component\:modal {
+  opacity: 1;
+  visibility: visible;
+}
+
+.component\:modal\:\:content {
+  position: relative;
+  width: 100%;
+}
+
+.component\:modal\:\:close {
+  background: none;
+  border: none;
+  color: #fff;
+  font-weight: 700;
+  position: absolute;
+  right: 15px;
+  text-transform: uppercase;
+  top: 15px;
+  z-index: 2;
+}
+
 .menu\:primary {
   align-items: center;
   display: flex;
@@ -927,12 +1033,62 @@ mark {
   }
 }
 
+.block\:gallery {
+  max-width: 800px;
+  position: relative;
+  width: 100%;
+}
+
+.block\:gallery\:\:arrow {
+  background: none;
+  border: none;
+  padding: 0;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 1;
+}
+
+.block\:gallery\:\:arrow.»left {
+  left: 0;
+}
+
+@media (max-width: 38.74em) {
+  .block\:gallery\:\:arrow.»left {
+    left: 35px;
+  }
+}
+
+.block\:gallery\:\:arrow.»right {
+  right: 0;
+}
+
+@media (max-width: 38.74em) {
+  .block\:gallery\:\:arrow.»right {
+    right: 35px;
+  }
+}
+
+.block\:gallery\:\:arrow svg {
+  display: block;
+  fill: #fff;
+  height: auto;
+  width: 20px;
+}
+
+.block\:gallery\:\:image img {
+  display: block;
+  height: auto;
+  max-width: 100%;
+  margin: 0 auto;
+}
+
 .block\:header {
   left: 0;
   position: absolute;
   top: 0;
   width: 100%;
-  z-index: 10;
+  z-index: 9;
 }
 
 .block\:header\:\:boxes {

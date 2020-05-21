@@ -1,0 +1,31 @@
+.block\:gallery
+  max-width: 800px
+  position: relative
+  width: 100%
+
+.block\:gallery\:\:arrow
+  background: none
+  border: none
+  padding: 0
+  position: absolute
+  top: 50%
+  transform: translateY(-50%)
+  z-index: 1
+  &.»left
+    left: 0
+    @include mq ($until: mobile)
+      left: 35px
+  &.»right
+    right: 0
+    @include mq ($until: mobile)
+      right: 35px
+  svg
+    display: block
+    fill: $WHITE
+    height: auto
+    width: 20px
+
+.block\:gallery\:\:image
+  img
+    @include image-max
+    margin: 0 auto
