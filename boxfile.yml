@@ -1,0 +1,30 @@
+run.config:
+  engine: php
+  engine.config:
+    runtime: php-7.2
+    display_errors: false
+    extensions:
+      - gd
+      - mysqli
+      - curl
+      - zlib
+      - mbstring
+      - xml
+      - tokenizer
+      - ctype
+      - zip
+      - phar
+
+web.wp:
+  start:
+    php: start-php
+    apache: start-apache
+  network_dirs:
+    data.storage:
+      - wp-content/uploads/
+
+data.db:
+  image: nanobox/mysql
+
+data.storage:
+  image: nanobox/unfs
