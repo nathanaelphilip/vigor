@@ -264,7 +264,7 @@
           <span class="component:button::text">Subscribe</span>
         </button>
       </form>
-      <div class="block:newsletter::fineprint">
+      <div class="block:newsletter::message">
         <p>We don’t spam. I mean… Spam is in a can. Why would we put your email in a can?</p>
       </div>
     </div>

@@ -1,4 +1,5 @@
 <?php
+    require_once 'vendor/autoload.php';
 
     require_once 'functions/assets.php';
     require_once 'functions/setup.php';

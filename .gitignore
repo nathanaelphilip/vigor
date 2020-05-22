@@ -1,5 +1,6 @@
 node_modules/
 wp-content/themes/vigor/dist/
+wp-content/themes/vigor/vendor/
 wp-content/uploads/
 wp-content/upgrade/
 

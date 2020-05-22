@@ -13,12 +13,21 @@ jQuery(($) => {
   $('[coupon]').on('submit', async event => {
     event.preventDefault()
 
-    const email = $(event.currentTarget).find('input').val()
+    const $input = $(event.currentTarget)
+    const email = $input.find('input').val()
 
-    const response = await $.post(VIGOR.AJAX, {
-      action: 'subscribe',
-      email
-    })
+    if (email && email !== '') {
+      $input.removeClass('»error')
+
+      const { data } = await $.post(VIGOR.AJAX, {
+        action: 'subscribe',
+        email
+      })
+    }
+
+    if (!email && email === '') {
+      $input.addClass('»error')
+    }
   })
 
   $('[buy]').one('click', async event => {
@@ -33,8 +42,6 @@ jQuery(($) => {
     })
 
     $this.attr('href', data.url).find('span').text('Go to Cart')
-
-
   })
 
 
