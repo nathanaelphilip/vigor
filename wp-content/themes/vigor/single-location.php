@@ -20,10 +20,12 @@
       <div class="card:location::gallery">
         <?php foreach ($limit as $count => $id): ?>
           <figure class="card:location::image">
+            <a index="<?= $count ?>" href="<?php the_permalink() ?>" action>
             <?php if ($count === 3): ?>
-              <a href="<?php the_permalink() ?>" action class="card:location::action"><?= count($images) - 4 ?> more</a>
+              <div class="card:location::action"><?= count($images) - 4 ?> more</div>
             <?php endif; ?>
             <?= wp_get_attachment_image($id, 'thumbnail') ?>
+            </a>
           </figure>
         <?php endforeach; ?>
       </div>

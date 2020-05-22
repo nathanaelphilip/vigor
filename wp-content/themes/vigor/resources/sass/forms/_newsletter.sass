@@ -11,6 +11,8 @@ $deg: -10deg
   @include flex ($justify: center)
   background: $WHITE
   transform: skewX($deg)
+  &.»error
+    border: 1px solid red
 
 .form\:newsletter\:\:input
   align-self: stretch
@@ -18,8 +20,6 @@ $deg: -10deg
   display: block
   transform: skewX(-$deg)
   width: 95%
-  &.»error
-    border: 1px solid red
   &:focus
     outline: none
   @include mq ($until: mobile)

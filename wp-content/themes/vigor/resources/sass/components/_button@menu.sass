@@ -1,0 +1,23 @@
+.component\:button\@menu
+  background: none
+  border: none
+  display: block
+  padding: 0
+  width: 25px
+  @include mq ($from: mobile)
+    display: none
+
+.component\:button\@menu\:\:line
+  $o: 7px
+  background: $WHITE
+  height: 2px
+  margin: 5px 0
+  position: relative
+  .state\:menu &:nth-child(1)
+    top: $o
+    transform: rotate(45deg)
+  .state\:menu &:nth-child(2)
+    opacity: 0
+  .state\:menu &:nth-child(3)
+    top: -$o
+    transform: rotate(-45deg)

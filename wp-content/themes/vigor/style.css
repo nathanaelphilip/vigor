@@ -891,6 +891,41 @@ mark {
   color: #fff;
 }
 
+.component\:button\@menu {
+  background: none;
+  border: none;
+  display: block;
+  padding: 0;
+  width: 25px;
+}
+
+@media (min-width: 38.75em) {
+  .component\:button\@menu {
+    display: none;
+  }
+}
+
+.component\:button\@menu\:\:line {
+  background: #fff;
+  height: 2px;
+  margin: 5px 0;
+  position: relative;
+}
+
+.state\:menu .component\:button\@menu\:\:line:nth-child(1) {
+  top: 7px;
+  transform: rotate(45deg);
+}
+
+.state\:menu .component\:button\@menu\:\:line:nth-child(2) {
+  opacity: 0;
+}
+
+.state\:menu .component\:button\@menu\:\:line:nth-child(3) {
+  top: -7px;
+  transform: rotate(-45deg);
+}
+
 .component\:modal {
   opacity: 0;
   visibility: hidden;
@@ -944,9 +979,12 @@ body.state\:modal .component\:modal {
   .menu\:primary {
     opacity: 0;
     visibility: hidden;
-    background: #fff;
-    color: #000;
+    background: #000;
+    color: #fff;
+    flex-direction: column;
+    font-size: 24px;
     height: 100%;
+    justify-content: center;
     left: 0;
     position: fixed;
     top: 0;
@@ -954,8 +992,30 @@ body.state\:modal .component\:modal {
   }
 }
 
-.menu\:primary a:not(:last-child) {
-  margin-right: 30px;
+.state\:menu .menu\:primary {
+  opacity: 1;
+  visibility: visible;
+}
+
+.menu\:primary a {
+  border-bottom: 1px solid transparent;
+}
+
+.menu\:primary a:hover,
+.menu\:primary a.»active {
+  border-color: #fff;
+}
+
+@media (min-width: 38.75em) {
+  .menu\:primary a:not(:last-child) {
+    margin-right: 30px;
+  }
+}
+
+@media (max-width: 38.74em) {
+  .menu\:primary a:not(:last-child) {
+    margin-bottom: 30px;
+  }
 }
 
 .menu\:primary\:\:cart svg {
@@ -984,6 +1044,10 @@ body.state\:modal .component\:modal {
   justify-content: center;
   background: #fff;
   transform: skewX(-10deg);
+}
+
+.form\:newsletter\:\:box.»error {
+  border: 1px solid red;
 }
 
 .form\:newsletter\:\:input {
@@ -1041,6 +1105,7 @@ body.state\:modal .component\:modal {
 
 .block\:gallery {
   max-width: 800px;
+  margin: 0 auto;
   position: relative;
   width: 100%;
 }
@@ -1310,7 +1375,7 @@ body.state\:modal .component\:modal {
   text-align: center;
   top: 100px;
   transform: translateX(-50%);
-  z-index: 5;
+  z-index: 2;
 }
 
 @media (max-width: 60.615em) {
@@ -1365,10 +1430,14 @@ body.state\:modal .component\:modal {
   max-width: 760px;
 }
 
-.block\:newsletter\:\:fineprint {
+.block\:newsletter\:\:message {
   font-size: 12px;
   font-weight: 500;
   text-align: center;
+}
+
+.block\:newsletter\:\:message strong {
+  font-weight: 700;
 }
 
 .block\:plans {

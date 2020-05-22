@@ -1,17 +1,15 @@
 <?php
   use \DrewM\MailChimp\MailChimp;
 
-  $api_key = '72e833628969ac0c463ae2355fff3e35-us4';
-  $list_id = '46281f202e';
-
   add_action( 'wp_ajax_subscribe', 'subscribe' );
   add_action( 'wp_ajax_nopriv_subscribe', 'subscribe' );
 
-
-  $mc = new MailChimp($api_key);
-
   function subscribe ()
   {
+    $api_key = '72e833628969ac0c463ae2355fff3e35-us4';
+    $list_id = '46281f202e';
+
+    $mc = new MailChimp($api_key);
     $email = $_POST['email'];
 
     $mc->post('lists/' . $list_id . '/members', [

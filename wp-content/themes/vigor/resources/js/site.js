@@ -9,24 +9,39 @@ jQuery(($) => {
     dots: true
   })
 
+  $('[menu]').on('click', event => {
+    event.preventDefault()
+    $('body').toggleClass('state:menu')
+  })
+
 
   $('[coupon]').on('submit', async event => {
     event.preventDefault()
 
-    const $input = $(event.currentTarget)
-    const email = $input.find('input').val()
+    const $input = $(event.currentTarget).find('input')
+    const $parent = $input.parent()
+    const $message = $('.block\\:newsletter\\:\\:message')
+    const email = $input.val()
 
     if (email && email !== '') {
-      $input.removeClass('»error')
+      $parent.removeClass('»error')
 
-      const { data } = await $.post(VIGOR.AJAX, {
+      const { success, data } = await $.post(VIGOR.AJAX, {
         action: 'subscribe',
         email
       })
+
+      if (success === false) {
+        $message.text(data.error)
+      }
+
+      if (success === true) {
+        $message.text(`Thank you! Here is your code: <strong>${data.code}</strong>`)
+      }
     }
 
     if (!email && email === '') {
-      $input.addClass('»error')
+      $parent.addClass('»error')
     }
   })
 
@@ -55,6 +70,7 @@ jQuery(($) => {
   $('body').on('click', '[action]', async event => {
     event.preventDefault()
     const $element = $(event.currentTarget)
+    const index = $element.attr('index')
     const url = $element.attr('href')
 
     const html = await $.get(url, {action: 'gallery'}, 'html')
@@ -64,6 +80,7 @@ jQuery(($) => {
     $('body').addClass('state:modal')
 
     $('[gallery\\@slides]').slick({
+      initialSlide: index,
       prevArrow: $('[gallery]').find('.»left'),
       nextArrow: $('[gallery]').find('.»right'),
       fade: true
