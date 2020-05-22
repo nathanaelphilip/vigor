@@ -15,12 +15,26 @@ jQuery(($) => {
 
     const email = $(event.currentTarget).find('input').val()
 
-    const response = await $.get(VIGOR.AJAX, {
+    const response = await $.post(VIGOR.AJAX, {
       action: 'subscribe',
       email
     })
+  })
 
-    console.log(response)
+  $('[buy]').one('click', async event => {
+    event.preventDefault()
+
+    const $this = $(event.currentTarget)
+    const id = $this.attr('buy')
+
+    const { data } = await $.post(VIGOR.AJAX, {
+      action: 'cart',
+      id
+    })
+
+    $this.attr('href', data.url).find('span').text('Go to Cart')
+
+
   })
 
 

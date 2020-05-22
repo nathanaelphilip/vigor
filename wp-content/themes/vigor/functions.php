@@ -7,3 +7,4 @@
     require_once 'functions/shortcodes.php';
 
     require_once 'functions/subscribe.php';
+    require_once 'functions/cart.php';

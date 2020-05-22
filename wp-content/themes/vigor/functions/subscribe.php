@@ -7,7 +7,7 @@
 
   function subscribe ()
   {
-    $email = $_GET['email'];
+    $email = $_POST['email'];
     $code = uniqid('CODE');
 
     $coupon = new WC_Coupon($code);

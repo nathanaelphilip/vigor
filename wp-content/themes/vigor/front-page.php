@@ -229,7 +229,11 @@
                     <mark class="card:product::price"><?= $product->get_price_html() ?></mark>
                   </div>
                   <div class="card:product::action">
-                    <a href="<?= get_permalink($product->id) ?>" class="component:button »small »filled">
+                    <a
+                      href="<?= get_permalink($product->id) ?>"
+                      class="component:button »small »filled"
+                      buy="<?= $product->id ?>"
+                      >
                       <span class="component:button::text">
                         Buy Now
                       </span>
