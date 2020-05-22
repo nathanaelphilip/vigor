@@ -15,6 +15,10 @@ run.config:
       - zip
       - phar
 
+deploy.config:
+  extra_steps:
+    - mv live-wp-config.php wp-config.php
+
 web.wp:
   start:
     php: start-php

@@ -1,4 +1,5 @@
 node_modules/
+live-wp-config.php
 wp-config.php
 wp-content/themes/vigor/dist/
 wp-content/themes/vigor/vendor/
